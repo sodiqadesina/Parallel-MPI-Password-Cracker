@@ -7,9 +7,9 @@ The final version was executed on a high-performance cluster using 40 MPI proces
 
 🧩 1. From Serial to Parallel — The Journey
 
-🔹 Serial Baseline (find_serial_baseline.c)
+### Serial Baseline (find_serial_baseline.c)
 
-The provided serial code (find_serial_baseline.c) sequentially tested all possible passwords from a defined character set until a match was found.
+The serial code (find_serial_baseline.c) sequentially tested all possible passwords from a defined character set until a match was found.
 While correct, this approach is computationally expensive — as the password length and alphabet size grow, the total combinations increase exponentially (e.g., 64⁴ ≈ 16.7M combinations).
 
 Limitations of the Serial Version
@@ -22,7 +22,7 @@ Cannot scale with available cluster resources
 
 ➡️ The goal: parallelize this process using MPI to divide the search space efficiently and coordinate early stopping once the correct password is found .
 
-🔹 Designing the MPI Version (find_passwd_mpi.c)
+### Designing the MPI Version (find_passwd_mpi.c)
 
 To parallelize the search:
 
