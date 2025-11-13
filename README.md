@@ -14,13 +14,13 @@ While correct, this approach is computationally expensive — as the password le
 
 Limitations of the Serial Version
 
-Only utilizes a single CPU core
+- Only utilizes a single CPU core
 
-No early termination across parallel instances
+- No early termination across parallel instances
 
-Cannot scale with available cluster resources
+- Cannot scale with available cluster resources
 
-➡️ The goal: parallelize this process using MPI to divide the search space efficiently and coordinate early stopping once the correct password is found .
+The goal: parallelize this process using MPI to divide the search space efficiently and coordinate early stopping once the correct password is found .
 
 ### Designing the MPI Version (find_passwd_mpi.c)
 
