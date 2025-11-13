@@ -122,7 +122,8 @@ Wall-clock execution time
 
 
 ### 📊 5. Discussion and Analysis
-🔹 Performance Gains
+
+- Performance Gains
 
 The MPI version exhibited near-linear speedup for smaller search spaces:
 
@@ -130,7 +131,7 @@ Increasing from 2 → 5 → 20 → 40 ranks significantly reduced runtime.
 
 Overhead from MPI communication was negligible compared to computation.
 
-🔹 Scalability Limitations
+- Scalability Limitations
 
 For longer passwords (4-char), even with 40 processes, total runtime (~87s) remained high because:
 
@@ -140,7 +141,7 @@ Hash computation dominates per iteration
 
 Speedup saturates once computation outweighs distribution overhead
 
-🔹 Early Termination Efficiency
+- Early Termination Efficiency
 
 The MPI_Allreduce synchronization ensures all ranks terminate almost immediately after discovery, minimizing wasted cycles.
 In tests, termination delay was <1 second across all nodes.
